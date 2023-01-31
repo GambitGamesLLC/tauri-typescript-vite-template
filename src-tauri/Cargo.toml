@@ -5,7 +5,7 @@ description = "A Tauri app built with Typescript as the language and Vite as the
 authors = ["Gambit Games LLC"]
 license = ""
 repository = ""
-default-run = "app"
+default-run = "tauri-typescript-vite-template"
 edition = "2021"
 rust-version = "1.59"
 
