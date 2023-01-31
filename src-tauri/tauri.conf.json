@@ -29,7 +29,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.gambit.tauri-typescript-vite-template",
+      "identifier": "com.gambitgames.tauri-typescript-vite-template",
       "longDescription": "",
       "macOS": {
         "entitlements": null,

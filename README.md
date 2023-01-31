@@ -23,7 +23,7 @@ HOW TO USE THIS TEMPLATE
 ---------------------------
 - This template uses [Typescript](https://www.typescriptlang.org/docs/), a superset of the Javascript language.
 
-- Typescript allows you to add type definitions for a better debugging and intellisense experience for anyone using your library. If your unfamiliar with Typescript, you can still write normal Javascript in a .ts (Typescript) file. 
+- Typescript allows you to add type definitions for a better debugging and intellisense experience for anyone reading code. If your unfamiliar with Typescript, you can still write normal Javascript in a .ts (Typescript) file, but we recommend switching to Typescript completely. 
 
 - When making builds, your typescript code will become Javascript, so don't worry about compatability.
 
@@ -32,9 +32,18 @@ HOW TO USE THIS TEMPLATE
 - The ```./index.html``` file at the project root is only used as the main entry point and should remain untouched for most if not all of your apps development.
 
 ---------------------------
-HOW TO TEST YOUR APPLICATION
+HOW TO TEST YOUR PROJECT AS AN WEBSITE
 ---------------------------
-- To test your library, open the VSCode terminal and run the ```pnpm tauri dev``` command to compile your current local files for a development build and have the application window start automatically and begin viewing the ```index.html``` file at your project root.
+- To test your project as a website, we can skip using Tauri as a build step and just use Vite to bundle our code and serve it via local server. To do this, open the VSCode terminal and run the ```pnpm run dev``` command to compile your current local files and then hold ```Ctrl + Left Click``` on the link that Vite generates to open your browser to your ```index.html``` file running within a local server.
+
+- Any changes you make to your code will automatically compile and run in the browser link that Vite generated for you.
+
+- Please note that hot module replacement may not function properly depending on what other dependencies your project uses. This is most common with WebGL engines like Babylonjs. Your code is still testable, but the state of your variables will refresh from scratch everytime you save a file.
+
+---------------------------
+HOW TO TEST YOUR PROJECT AS AN APPLICATION
+---------------------------
+- To test your project as an application, open the VSCode terminal and run the ```pnpm tauri dev``` command to compile your current local files for a development build and have the application window start automatically and begin viewing the ```index.html``` file at your project root.
 
 - Any changes you make to your code will automatically compile and run in the development application window that Tauri and Vite generated for you.
 
