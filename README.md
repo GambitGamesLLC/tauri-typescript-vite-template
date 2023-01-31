@@ -32,6 +32,27 @@ HOW TO USE THIS TEMPLATE
 - The ```./index.html``` file at the project root is only used as the main entry point and should remain untouched for most if not all of your apps development.
 
 ---------------------------
+HOW TO RENAME YOUR APPLICATION
+---------------------------
+- Open ```index.html``` and change the ```<title>tauri-typescript-vite-template</title>``` to your project's name
+
+- Open ```package.json``` and change the ```"name": "tauri-typescript-vite-template",``` line to your project's name
+
+- Open ```src-tauri/tauri.conf.json``` and change the ```productName```, ```identifier```, and ```title``` fields to your project's name
+
+- Open ```src-tauri/Cargo.toml``` and change the ```name``` and ```default-run``` fields to your project's name. You should also consider changing the ```description``` and ```authors``` fields to your project's specific information
+
+---------------------------
+HOW TO UPDATE YOUR WEBSITE FAVICON
+---------------------------
+- Within the root folder, replace the ```favicon.ico``` file with your own .ico image file
+
+---------------------------
+HOW TO UPDATE YOUR APPLICATION ICONS
+---------------------------
+- Open ```src-tauri/icons``` folder with your windows explorer, and replace the provided image files with your own variations
+
+---------------------------
 HOW TO TEST YOUR PROJECT AS AN WEBSITE
 ---------------------------
 - To test your project as a website, we can skip using Tauri as a build step and just use Vite to bundle our code and serve it via local server. To do this, open the VSCode terminal and run the ```pnpm run dev``` command to compile your current local files and then hold ```Ctrl + Left Click``` on the link that Vite generates to open your browser to your ```index.html``` file running within a local server.
@@ -52,9 +73,11 @@ HOW TO TEST YOUR PROJECT AS AN APPLICATION
 ---------------------------
 HOW TO BUILD YOUR APPLICATION
 ---------------------------
-- To build your library for distribution, open the VSCode terminal and run the ```pnpm tauri build``` command. 
+- To build your project for distribution as an application, open the VSCode terminal and run the ```pnpm tauri build``` command. 
 
 - This will generate a ```dist``` folder containing a Windows executable application installer.
+
+- By default, the path to the installer will be at ```tauri-typescript-vite-template\src-tauri\target\release\bundle/msi/tauri-typescript-vite-template_1.0.0_x64_en-US.msi```
 
 - We do not recommend including your application's ```dist``` folder as part of your Github repo, and as such the ```dist``` folder has been added to the ```.gitignore``` file in your project's root directory.
 
